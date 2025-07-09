@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    background-color: $bg-color;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+
+    h3 {
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+            color: $text-color-primary;
+            font-weight: bold;
+
+            &:hover {
+                color: color.adjust($text-color-primary, $lightness: -30%)
+            }
+        }
+    }
+}
