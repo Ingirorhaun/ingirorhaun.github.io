@@ -1,5 +1,15 @@
+// Shared
 @use 'base';
-@use 'hero';
-@use 'contact-form';
-@use 'header';
 @use 'variables';
+
+// Components
+@use 'hero';
+@use 'header';
+@use 'project-card';
+@use 'typing-animation';
+@use 'footer';
+
+// Pages
+@use 'home-page';
+@use 'project-page';
+@use 'contact-page';

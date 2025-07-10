@@ -1,8 +1,68 @@
+@use "variables" as *;
+@use "sass:color";
+
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: $font-family;
+  background: radial-gradient(
+    circle at bottom left,
+    $bg-color-dark,
+    $bg-color-dark-1
+  );
+  background-attachment: fixed;
+  color: $text-color-primary;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  scroll-margin-top: 86px; // Adjust for the fixed header height
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: $color-accent-hover;
+  }
+}
+
+h1,h2,h3 {
+  font-family: $font-family-secondary;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $color-accent;
+  color: $text-color-secondary;
+  text-decoration: none;
+  border-radius: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $color-accent-hover;
+    color: inherit;
+  }
 }

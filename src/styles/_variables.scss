@@ -1,3 +1,20 @@
-$bg-color: #f0f0f0;
-$text-color-primary: #333333;
-$text-color-secondary: #cfcfcf;
+$bg-color: #7f9bf8;
+$bg-color-accent: #161922;
+$bg-color-accent-1: #283746;
+$bg-color-dark: #181d25;
+$bg-color-dark-1: hsl(208, 27%, 19%);
+$color-accent: #39a0b7;
+$color-accent-hover: #2a7d8c;
+$text-color-primary: #ffffff;
+$text-color-secondary: #c9c9c9;
+$font-family: 'Raleway', sans-serif;
+$font-family-secondary: 'Inter', sans-serif;
+
+$header-height: 26px;
+$footer-height: 90px;
+
+// Responsive breakpoints
+$breakpoint-desktop-small: 1000px;
+$breakpoint-tablet: 768px;
+
+$breakpoint-mobile: 480px;
