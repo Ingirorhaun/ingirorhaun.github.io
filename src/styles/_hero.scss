@@ -1,6 +1,33 @@
-.hero {
-    min-height: 900px;
+@use "variables" as *;
+
+#hero {
+  background: radial-gradient(
+    circle at bottom left,
+    $bg-color-accent,
+    $bg-color-accent-1
+  );
+  margin-top: -86px;
+  padding: 8rem 2rem;
+  padding-top: calc(4rem + 86px);
+  color: $text-color-secondary;
+  clip-path: url(#wave);
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }

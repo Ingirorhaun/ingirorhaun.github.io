@@ -1,15 +1,25 @@
-import React from 'react';
+import React from "react";
+import TypingAnimation from "./TypingAnimation";
+import { useResponsive } from "../utils/useResponsive";
+
 const Hero: React.FC = () => {
+  const { isDesktop } = useResponsive();
+
   return (
-    <div className="hero">
-      <div>
-        <h3>Hello, I'm Francesco.</h3>
-        <h1>Front-End Developer</h1>
+    <section id="hero">
+      <div className="wrapper">
         <div>
-          <a title="View my work" href="#projects">View my work</a>
+          <h3>Hello, I'm Francesco.</h3>
+          <h1>Front-End Developer</h1>
+          <div>
+            <a title="View my work" className="btn" href="#projects">
+              View my work
+            </a>
+          </div>
         </div>
+        {isDesktop && <TypingAnimation />}
       </div>
-    </div>
+    </section>
   );
 };
 
