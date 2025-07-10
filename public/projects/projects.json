@@ -1,0 +1,20 @@
+[
+  {
+    "id": "portfolio",
+    "title": "Portfolio Website",
+    "image": "portfolio.jpg",
+    "description": "This very website, built with React, TypeScript, and Vite. Hosted on GitHub Pages.",
+    "techStack": ["React", "TypeScript", "Vite", "SCSS"],
+    "repositoryUrl": "https://github.com/Ingirorhaun/ingirorhaun.github.io",
+    "url": "https://ingirorhaun.github.io"
+  },
+  {
+    "id": "garden-bed-planner",
+    "title": "Garden Bed Planner",
+    "image": "garden-bed-planner.jpg",
+    "description": "Web app to plan garden beds, allowing users to visualize and manage their garden layouts using a drag-and-drop interface.",
+    "techStack": ["React", "TypeScript", "SCSS", "Node.js", "Express", "OracleDB"],
+    "repositoryUrl": "",
+    "url": "https://gardenbedplanner.com"
+  }
+]
