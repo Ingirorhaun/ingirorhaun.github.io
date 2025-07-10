@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+#contact {
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .contact-methods {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    
+    a {
+      text-align: center;
+
+      &:hover {
+        svg {
+          fill: $color-accent-hover;
+        }
+      }
+    }
+
+    svg {
+      fill: $color-accent;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
