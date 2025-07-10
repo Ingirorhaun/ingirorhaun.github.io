@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+.home-page {
+  color: $text-color-primary;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  #projects {
+    .projects-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      @media screen and (max-width: $breakpoint-tablet) {
+        justify-content: center;
+      }
+    }
+  }
+
+  section:not(#hero) {
+    max-width: 1400px;
+  }
+}
