@@ -1,31 +1,65 @@
-@use 'variables' as *;
-@use 'sass:color';
+@use "variables" as *;
+@use "sass:color";
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  background: radial-gradient(
+    circle at bottom left,
+    $bg-color-accent,
+    $bg-color-accent-1
+  );
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &.transparent {
+    background: transparent;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  nav {
     display: flex;
-    justify-content: space-between;
-    height: fit-content;
-    background-color: $bg-color;
-    padding: 20px;
-    position: sticky;
-    top: 0;
+    align-items: center;
+    gap: 20px;
 
-    h3 {
-        margin: 0;
+    a {
+      text-decoration: none;
+      color: $text-color-secondary;
+      font-weight: 300;
+      transition: color 0.3s;
+      font-size: 14px;
+
+      &:hover {
+        color: $color-accent;
+      }
     }
+  }
 
-    nav {
-        display: flex;
-        gap: 20px;
+  .logo {
+    color: $text-color-secondary;
+    margin-top: -11px;
 
-        a {
-            text-decoration: none;
-            color: $text-color-primary;
-            font-weight: bold;
-
-            &:hover {
-                color: color.adjust($text-color-primary, $lightness: -30%)
-            }
-        }
+    img {
+      width: 50px;
+      height: 50px;
     }
+  }
+
+  .active {
+    color: $text-color-primary;
+    background-color: $color-accent;
+    border-radius: 6px;
+    padding: 5px 10px;
+
+    &:hover {
+      color: $text-color-primary;
+      background-color: $color-accent-hover;
+    }
+  }
 }
