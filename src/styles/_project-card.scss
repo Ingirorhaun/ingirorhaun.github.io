@@ -1,0 +1,119 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+$card-width: 300px;
+$card-height: 200px;
+
+.project-card {
+    width: $card-width;
+    background: color.adjust($bg-color-dark-1, $lightness: 5%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    .project-image img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    &:hover {
+        transform: scale(1.2);
+        z-index: 1;
+        position: relative;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        
+        .project-image {
+            img {
+                transform: scale(1.05);
+            }
+        }
+        
+        .project-link {
+            color: $color-accent-hover;
+            
+            .arrow {
+                transform: translateX(4px);
+            }
+        }
+    }
+
+    .project-image {
+        width: 100%;
+        height: $card-height;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-image: url('https://placehold.co/600x400');
+        }
+        
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+        
+        .project-title {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $text-color-primary;
+            line-height: 1.3;
+        }
+        
+        .project-description {
+            margin: 0 0 1rem 0;
+            color: $text-color-secondary;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .project-tech {
+            margin: 0 0 1.25rem 0;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            
+            .tech-icon {
+                width: 20px;
+                height: 20px;
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $color-accent;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-top: auto;
+            
+            .arrow {
+                transition: transform 0.3s ease;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+// Grayscale effect for non-hovered cards
+.projects-list .project-card:hover ~ .project-card .project-image img,
+.projects-list:has(.project-card:hover) .project-card:not(:hover) .project-image img {
+    filter: grayscale(100%);
+}
